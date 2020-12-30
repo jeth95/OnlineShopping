@@ -1,0 +1,65 @@
+﻿@page
+@model OnlineShop.Pages.Account.AdminModel
+@{
+    ViewData["Title"] = "Admin Page";
+}
+<hr />
+<!--Add Button-->
+
+    <div>
+        <h4>Click + button to add product</h4>
+        <a class="primary-btn" asp-page="../Products/Add"><i class="fa fa-plus"></i></a>
+    </div>
+<!--/Add Button-->
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- Products tab & slick -->
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="products-tabs">
+                        <!-- tab -->
+                        <div id="tab1" class="tab-pane active">
+                            <div class="products-slick" data-nav="#slick-nav-1">
+                                <!-- product -->
+                                @{ foreach (var product in Model.Products)
+                                    {
+                                        <div class="product">
+                                            <div class="product-img">
+                                                <img src="~/img/@product.Images.First().Name" alt="@product.Images.First().Alt">
+                                            </div>
+                                            <div class="product-body">
+                                                <p class="product-category">@product.Category</p>
+                                                <h3 class="product-name"><a asp-page="./Products/Details" asp-route-id="@product.ProductId">@product.Name</a></h3>
+
+                                                <h4 class="product-price">@product.Price.ToString("C") <del class="product-old-price">@product.OldPrice</del></h4>
+                                                <a class="secondary-btn" asp-page="../Products/Edit" asp-route-id="@product.ProductId"><i class="fa fa-pencil"></i></a>
+                                                <a class="secondary-btn" asp-page="../Products/Delete" asp-route-id="@product.ProductId"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- /product -->
+                                    } }
+                            </div>
+                            <div id="slick-nav-1" class="products-slick-nav"></div>
+                        </div>
+                        <!-- /tab -->
+                    </div>
+                </div>
+            </div>
+            <!-- Products tab & slick -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

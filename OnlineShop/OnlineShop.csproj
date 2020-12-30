@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20201214195115_Initial.cs" />
+    <Compile Remove="Migrations\20201214195115_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20201214214357_AddImages.cs" />
+    <Compile Remove="Migrations\20201214214357_AddImages.Designer.cs" />
+    <Compile Remove="Migrations\20201222161440_RemoveImageData.cs" />
+    <Compile Remove="Migrations\20201222161440_RemoveImageData.Designer.cs" />
+    <Compile Remove="Migrations\20201222180956_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201222180956_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201222214126_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201222214126_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201230165644_Initial.cs" />
+    <Compile Remove="Migrations\20201230165644_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20201230175329_DeleteBehavior.cs" />
+    <Compile Remove="Migrations\20201230175329_DeleteBehavior.Designer.cs" />
+    <Compile Remove="Migrations\20201230180032_Initial.cs" />
+    <Compile Remove="Migrations\20201230180032_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20201230180350_DbSet.cs" />
+    <Compile Remove="Migrations\20201230180350_DbSet.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>
