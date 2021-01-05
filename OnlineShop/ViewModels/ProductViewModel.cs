@@ -17,7 +17,7 @@ namespace OnlineShop.ViewModels
         public string Description { get; set; }
 
         public bool IsNew => OldPrice == 0;
-        public float Discount => OldPrice /(OldPrice - Price);
+        public int Discount =>  (int) (((OldPrice - Price) / OldPrice) * 100);
 
         public ICollection<Image> Images { get; set; }
 

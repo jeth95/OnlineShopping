@@ -26,9 +26,11 @@
                 <input asp-for="Product.OldPrice" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="Product.Category" class="control-label"></label>
-                <input asp-for="Product.Category" class="form-control" />
-                <span asp-validation-for="Product.Category" class="text-danger"></span>
+                <label asp-for="Product.CategoryId" class="control-label">Category</label>
+                <select class="input-select" asp-for="Product.CategoryId" asp-items="Model.Categories">
+                   <option value="">Select Category...</option>
+                </select>
+                <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Product.Description" class="control-label"></label>

@@ -18,7 +18,7 @@ namespace OnlineShop.ViewModels
         public float? OldPrice { get; set; }
 
         [Required]
-        public string Category { get; set; }
+        public string CategoryId { get; set; }
 
         [Required]
         public string Description { get; set; }

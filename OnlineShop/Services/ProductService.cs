@@ -26,12 +26,18 @@ namespace OnlineShop.Services
         }
         public async Task<Product> GetProductAsync(int? id)
         {
-            return await _repository.Products.Include(p => p.Images).FirstOrDefaultAsync(p => p.ProductId == id);
+            return await _repository.Products
+                .Include(p => p.Images)
+                .Include(p => p.Category)
+                .FirstOrDefaultAsync(p => p.ProductId == id);
         }
 
         public async Task<IEnumerable<Product>> GetProductsAsync()
         {
-            return await _repository.Products.Include(p => p.Images).ToListAsync();
+            return await _repository.Products
+                .Include(p => p.Images)
+                .Include(p => p.Category)
+                .ToListAsync();
         }
         public bool ProductExists(int id)
         {
@@ -48,6 +54,16 @@ namespace OnlineShop.Services
         {
             _repository.Add(product);
             await _repository.SaveChangesAsync();
+        }
+
+        public async Task<Category> GetCategoryAsync(int? id)
+        {
+            return await _repository.Categories.FirstOrDefaultAsync(c => c.CategoryId == id);
+        }
+
+        public async Task<IEnumerable<Category>> GetCategoriesAsync()
+        {
+            return await _repository.Categories.Include(c => c.Products).ToListAsync();
         }
 
         //public ProductDetailsViewModel MapProductToViewModel(Product product)

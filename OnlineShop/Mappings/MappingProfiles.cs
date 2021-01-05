@@ -13,12 +13,18 @@ namespace OnlineShop.Mappings
     {
         public MappingProfiles ()
         {
-            CreateMap<Product, ProductViewModel>();
+            CreateMap<Product, ProductViewModel>()
+                .ForMember(vm =>
+                    vm.Category,
+                    opt => opt.MapFrom(product => product.Category.Name));
 
             CreateMap<SaveProductResource, Product>()
                 .ForMember(product =>
                     product.Images,
-                    opt => opt.Ignore());
+                    opt => opt.Ignore())
+                .ForMember(product =>
+                    product.CategoryId,
+                    opt => opt.MapFrom(r => int.Parse(r.CategoryId)));
         }
 
         //private string[] Split(string value)

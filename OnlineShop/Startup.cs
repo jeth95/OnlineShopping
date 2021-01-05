@@ -29,7 +29,7 @@ namespace OnlineShop
         {
             services.AddRazorPages();
             services.AddAutoMapper(typeof (Startup));
-
+            services.AddMemoryCache();
             /*Pour l'utilisation de sql server base de donnee*/
 
             //services.AddDbContext<OnlineShopContext>(options =>

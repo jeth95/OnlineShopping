@@ -550,3 +550,5 @@ C:\Users\Jethro\source\repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\s
 C:\Users\Jethro\source\repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\OnlineShop.dll
 C:\Users\Jethro\source\repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\OnlineShop.pdb
 C:\Users\Jethro\source\repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\OnlineShop.genruntimeconfig.cache
+C:\Users\Jethro\source\repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\CategoryList\Default.cshtml.g.cs
+C:\Users\Jethro\source\repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\CategoryTab\Default.cshtml.g.cs

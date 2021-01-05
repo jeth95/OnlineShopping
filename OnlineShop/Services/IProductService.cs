@@ -8,12 +8,14 @@ namespace OnlineShop.Services
 {
     public interface IProductService
     {
-        Task<Product> GetProductAsync(int? id);
-        Task<IEnumerable<Product>> GetProductsAsync();
         bool ProductExists(int id);
+        Task AddProductAsync(Product product);
+        Task<Product> GetProductAsync(int? id);
+        Task<Category> GetCategoryAsync(int? id);
         Task UpdateProductAsync(Product product);
         Task RemoveProductAsync(Product product);
+        Task<IEnumerable<Product>> GetProductsAsync();
+        Task<IEnumerable<Category>> GetCategoriesAsync();
 
-        Task AddProductAsync(Product product);
     }
 }

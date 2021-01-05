@@ -18,8 +18,14 @@ namespace OnlineShop.Data
             modelBuilder.Entity<Product>()
                 .HasMany(p => p.Images)
                 .WithOne(i => i.Product)
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Cascade);
+                .IsRequired();
+                
+
+            modelBuilder.Entity<Category>()
+                .HasMany(c => c.Products)
+                .WithOne(p => p.Category)
+                .IsRequired();
+               
 
             modelBuilder.Entity<User>()
                 .Property(u => u.IsAdmin)
@@ -29,5 +35,7 @@ namespace OnlineShop.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
     }
 }

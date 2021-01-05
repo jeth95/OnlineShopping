@@ -22,6 +22,12 @@ namespace OnlineShop.Pages.Products
         private readonly IMapper _mapper;
         private readonly IProductService _productService;
         private readonly IWebHostEnvironment _hostingEnvironment;
+
+
+        [BindProperty]
+        public SaveProductResource Product { get; set; } = new SaveProductResource();
+        public List<SelectListItem> Categories { get; set; }
+
         public AddModel(IProductService productService, IWebHostEnvironment hostingEnvironment, IMapper mapper)
         {
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
@@ -29,14 +35,16 @@ namespace OnlineShop.Pages.Products
             _hostingEnvironment = hostingEnvironment ?? throw new ArgumentNullException(nameof(hostingEnvironment));
         }
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
+            var categories = await _productService.GetCategoriesAsync();
+
+            Categories = categories.Select(c => 
+                new SelectListItem { Value = c.CategoryId.ToString(), Text = c.Name }).ToList();
+
             return Page();
         }
-
-        [BindProperty]
-        public SaveProductResource Product { get; set; }
-
+        
 
         //To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://aka.ms/RazorPagesCRUD.

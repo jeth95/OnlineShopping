@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -14,14 +15,16 @@ namespace OnlineShop.Pages.Products
 {
     public class DetailsModel : PageModel
     {
+        private readonly IMapper _mapper;
         private readonly IProductService _productService;
 
-        public DetailsModel( IProductService productService)
+        public DetailsModel( IProductService productService, IMapper mapper)
         {
-            _productService = productService;
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _productService = productService ?? throw new ArgumentNullException(nameof(productService));
         }
 
-        public Product Product { get; set; }
+        public ProductViewModel Product { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,7 +33,7 @@ namespace OnlineShop.Pages.Products
                 return NotFound();
             }
 
-            Product = await _productService.GetProductAsync(id);
+            Product = _mapper.Map<ProductViewModel>(await _productService.GetProductAsync(id));
 
             if (Product == null)
             {
