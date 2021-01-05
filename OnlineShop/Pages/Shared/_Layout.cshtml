@@ -47,8 +47,8 @@
                     <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
                 </ul>
                 <ul class="header-links pull-right">
-                    <li><a asp-page="./Account/Admin" ><i class="fa fa-user-secret"></i> Admin</a></li>
-                    <li><a asp-page="./Account/Login"><i class="fa fa-user-o"></i> My Account</a></li>
+                    <li><a asp-page="/Account/Admin" ><i class="fa fa-user-secret"></i> Admin</a></li>
+                    <li><a asp-page="/Account/Login"><i class="fa fa-user-o"></i> My Account</a></li>
                 </ul>
             </div>
         </div>
@@ -133,7 +133,7 @@
                                     </div>
                                     <div class="cart-btns">
                                         <a href="#">View Cart</a>
-                                        <a asp-page="./Products/Checkout">Checkout<i class="fa fa-arrow-circle-right"></i></a>
+                                        <a asp-page="/Products/Checkout">Checkout<i class="fa fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -165,9 +165,9 @@
             <div id="responsive-nav">
                 <!-- NAV -->
                 <ul class="main-nav nav navbar-nav">
-                    <li><a asp-page="./">Home</a></li>
-                    <li><a asp-page="./Products/Category">Categories</a></li>
-                    <li><a asp-page="./Products/HotDeals">Hot Deals</a></li>
+                    <li><a asp-page="/Index">Home</a></li>
+                    <li><a asp-page="/Products/Category">Categories</a></li>
+                    <li><a asp-page="/Products/HotDeals">Hot Deals</a></li>
                 </ul>
                 <!-- /NAV -->
             </div>
