@@ -552,3 +552,4 @@ C:\Users\Jethro\source\repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\O
 C:\Users\Jethro\source\repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\OnlineShop.genruntimeconfig.cache
 C:\Users\Jethro\source\repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\CategoryList\Default.cshtml.g.cs
 C:\Users\Jethro\source\repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\CategoryTab\Default.cshtml.g.cs
+C:\Users\Jethro\Source\Repos\onlineshopping\OnlineShop\obj\Debug\netcoreapp3.1\Razor\Pages\Products\Cart.cshtml.g.cs

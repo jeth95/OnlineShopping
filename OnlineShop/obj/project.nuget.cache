@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wGTivh3sSmzLlawke4MJnPBVcGwKNv3oxTkaea0KNembkXPwsW4Z3jTTmpubWkntNLrzW3hqjfAV4lfvRueyqA==",
+  "dgSpecHash": "rRtO+ZSyRhhbc6WkFKMK/9Zr7b9uwV93cPrguXNRAAGRuEqubz61LP0qSh4zdXuTxTv+Hibl//Kei8OEXVVyJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jethro\\source\\repos\\onlineshopping\\OnlineShop\\OnlineShop.csproj",
+  "projectFilePath": "C:\\Users\\Jethro\\Source\\Repos\\onlineshopping\\OnlineShop\\OnlineShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jethro\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\Jethro\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
