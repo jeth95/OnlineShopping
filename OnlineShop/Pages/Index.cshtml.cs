@@ -12,10 +12,14 @@ namespace OnlineShop.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly IMapper _mapper;
-        private readonly ILogger<IndexModel> _logger;
-        private readonly IProductService _productService;
+        readonly IMapper _mapper;
+        
+        readonly ILogger<IndexModel> _logger;
+        
+        readonly IProductService _productService;
+
         public IEnumerable<Category> Categories { get; set; }
+        
         public IEnumerable<ProductViewModel> Products { get; set; }
 
         
@@ -24,6 +28,9 @@ namespace OnlineShop.Pages
             _mapper = mapper ?? throw new System.ArgumentNullException(nameof(mapper));
             _logger = logger ?? throw new System.ArgumentNullException(nameof(logger));
             _productService = productService ?? throw new System.ArgumentNullException(nameof(productService));
+
+            Products = new List<ProductViewModel>();
+            Categories = new List<Category>();
         }
 
         public async Task<IActionResult> OnGetAsync()

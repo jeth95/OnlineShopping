@@ -8888,25 +8888,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jethro\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Fabrice\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jethro\\source\\repos\\onlineshopping\\OnlineShop\\OnlineShop.csproj",
+      "projectUniqueName": "C:\\Users\\Fabrice\\Desktop\\OnlineShop\\OnlineShopping\\OnlineShop\\OnlineShop.csproj",
       "projectName": "OnlineShop",
-      "projectPath": "C:\\Users\\Jethro\\source\\repos\\onlineshopping\\OnlineShop\\OnlineShop.csproj",
-      "packagesPath": "C:\\Users\\Jethro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jethro\\source\\repos\\onlineshopping\\OnlineShop\\obj\\",
+      "projectPath": "C:\\Users\\Fabrice\\Desktop\\OnlineShop\\OnlineShopping\\OnlineShop\\OnlineShop.csproj",
+      "packagesPath": "C:\\Users\\Fabrice\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Fabrice\\Desktop\\OnlineShop\\OnlineShopping\\OnlineShop\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Jethro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Fabrice\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8962,6 +8957,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.3, 3.1.3]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8970,7 +8979,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
